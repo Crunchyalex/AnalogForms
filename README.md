@@ -8,13 +8,33 @@ The forms are created on [CognitoForms](https://www.cognitoforms.com/), where we
 Surprisingly, creating these forms proved a fun challenge, and some of those challenges perhaps were self-inflicted on the "swu-ish" ideas Jonas and I got along the way. 
 
 ## Shift Report
+On every shift, our baristas need to fill in a report.
+They need to type their own initials, and a date needs to go alongside that.
+Besides this, they need to select which shift they are on, either opening, middle or closing.
+![TheBasics](https://github.com/Crunchyalex/AnalogForms/blob/master/TheBasics.png)
 
-On every shift, our baristas need to fill in a report. The
+Because each type of shift require their own fields, we only want display the those relevant and have the rest hidden.
+This is easy to implement with the inbuilt click-logic of CognitoForms.
+![ShowMiddle](https://github.com/Crunchyalex/AnalogForms/blob/master/ShowMiddle.png)
+
+Showing a section then, is super simple. But what do we include in the sections?
+
+The opening shift needs to report the temperature of the fridges. And if they report them outside the optimal range of 1-5C, we provide a field the baristas have to fill out, in case the milk has turned bad.
+
+![BadMilk](https://github.com/Crunchyalex/AnalogForms/blob/master/BadMilk.gif)
+
+To create this effect, we created a permanently hidden text field with a default value set to a little piece of logic! 
+
+```
+isHidden = if LeftFridgeTemperature < 0 or RightFridgeTemperature < 0 then "Below 1C" else if 5 < LeftFridgeTemperature or 5 < RightFridgeTemperature then "Above 5C" else "Between 1-5C"
+```
+
+
 ### isEvenWeek
 ```=!(Math.Round(((Form.TheBasics.Date.DayOfYear + 6)/7)%2)==1)```
 
 shiftDay
-'''= if (Form.TheBasics.Date.DayOfWeek = "Monday")
+```= if (Form.TheBasics.Date.DayOfWeek = "Monday")
   then if (IsEvenWeek.Equals("true"))
   then "MondayEven"
   else "MondayUneven"
@@ -35,7 +55,7 @@ else if (Form.TheBasics.Date.DayOfWeek = "Friday")
   then "FridayEven"
   else "FridayUneven"
 else "Weekend"
-'''
+```
 hiddenCleanState
 =
 if ShiftDay.Equals("MondayEven")
