@@ -11,17 +11,18 @@ Surprisingly, creating these forms proved a fun challenge, and some of those cha
 On every shift, our baristas need to fill in a report.
 They need to type their own initials, and a date needs to go alongside that.
 Besides this, they need to select which shift they are on, either opening, middle or closing.
-![TheBasics](https://github.com/Crunchyalex/AnalogForms/blob/master/TheBasics.png)
+![TheBasics](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/TheBasics.png)
+
 
 Because each type of shift require their own fields, we only want display the those relevant and have the rest hidden.
 This is easy to implement with the inbuilt click-logic of CognitoForms.
-![ShowMiddle](https://github.com/Crunchyalex/AnalogForms/blob/master/ShowMiddle.png)
+![ShowMiddle](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/ShowMiddle.png)
 
 Showing a section then, is super simple. But what do we include in the sections?
 
 The opening shift needs to report the temperature of the fridges. And if they report them outside the optimal range of 1-5C, we provide a field the baristas have to fill out, in case the milk has turned bad.
 
-![BadMilk](https://github.com/Crunchyalex/AnalogForms/blob/master/BadMilk.gif)
+![BadMilk](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/BadMilk.gif)
 
 To create this effect, we created a permanently hidden text field with a default value set to a little piece of logic! 
 
