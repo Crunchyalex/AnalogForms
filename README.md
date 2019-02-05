@@ -11,6 +11,8 @@ Surprisingly, creating these forms proved a fun challenge, and while some of tho
 On every shift, our baristas need to fill in a report.
 They need to type their own initials, and a date needs to go alongside that.
 Besides this, they need to select which shift they are on, either opening, middle or closing.
+
+
 ![TheBasics](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/TheBasics.png)
 
 
