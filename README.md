@@ -1,10 +1,15 @@
 
-Starting my fourth semester at ITU
+# Starting out
+Before starting my fourth semester at ITU, Jonas and I set ourselves to create the new shift forms for Analog.
+These forms being both the shift report for opening, middle and closing shifts, but also the "receiving of goods" forms (milk being the main one).
 
-Analog has gotten itself new and shinny forms to fill out during the shift! 
+The forms are created on [CognitoForms](https://www.cognitoforms.com/), where we gather data filled in on every submission. This data is then sent to [Podio](http://Podio.com) through [Zapier](https://zapier.com/). Zapier and Podio are super helpful tools, but we'll focus mainly on what we've done in Cognito forms.
 
-Jonas anker
+Surprisingly, creating these forms proved a fun challenge, and some of those challenges perhaps were self-inflicted on the "swu-ish" ideas Jonas and I got along the way. 
 
+## Shift Report
+
+On every shift, our baristas need to fill in a report. The
 ### isEvenWeek
 ```=!(Math.Round(((Form.TheBasics.Date.DayOfYear + 6)/7)%2)==1)```
 
