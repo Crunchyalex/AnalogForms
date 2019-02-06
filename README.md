@@ -1,11 +1,12 @@
 
 # Starting out
-Before starting my fourth semester at ITU, Jonas and I set ourselves to create the new shift forms for Analog.
-We needed the shift report for opening, middle and closing shifts, but also the "receiving of goods" forms.
 
-The forms are created on [CognitoForms](https://www.cognitoforms.com/). The submitted form data is then sent to [Podio](http://Podio.com) through [Zapier](https://zapier.com/). Zapier and Podio are super helpful tools, but here I'll focus mainly on what we've done in Cognito forms.
+Before the 2019 spring semester at ITU could really get going, Jonas and I had to create new shift forms for Analog.
+We needed to make the shift report for opening, middle and closing shifts, but also the "receiving of goods" forms.
 
-Surprisingly, creating these forms proved a fun challenge, and while some of those challenges perhaps were self-inflicted on the "swu-ish" ideas Jonas and I got along the way, they were overcome with ferocious stubborness.
+The forms were to be created on [CognitoForms](https://www.cognitoforms.com/). Where the submitted form data is sent to [Podio](http://Podio.com) through [Zapier](https://zapier.com/). Zapier and Podio are both super exciting, and helpful tools, but for this post, we'll focus on Cognito Forms.
+
+Surprisingly, creating these forms proved a bit of a challenge, and while some of those challenges perhaps were self-inflicted on the "swu-ish" ideas Jonas and I got along the way, they were very fun to overcome! 
 
 ## Shift Report
 On every shift, our baristas need to fill in a report.
