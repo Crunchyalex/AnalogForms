@@ -1,8 +1,8 @@
 
 # Starting out
 
-Before the 2019 spring semester at ITU could really get going, Jonas and I had to create new shift forms for Analog.
-We needed to make the shift report for opening, middle and closing shifts, but also the "receiving of goods" forms.
+Before the 2019 spring semester began, Jonas and I had to create new shift forms for Analog.
+These were the shift report for opening, middle and closing shifts, but also the "receiving of goods" forms.
 
 The forms were to be created on [CognitoForms](https://www.cognitoforms.com/). Where the submitted form data is sent to [Podio](http://Podio.com) through [Zapier](https://zapier.com/). Zapier and Podio are both super exciting, and helpful tools, but for this post, we'll focus on Cognito Forms.
 
@@ -14,7 +14,7 @@ They need to type their own initials, and a date needs to go alongside that.
 Besides this, they need to select which shift they are on, either opening, middle or closing.
 
 
-![TheBasics](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/TheBasics.png)
+![TheBasics](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/TheBasics.gif)
 
 
 Because each type of shift require their own fields, we only want display the those relevant and have the rest hidden.
