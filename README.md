@@ -39,7 +39,7 @@ But you can also create custom conditional logic written with code!
 [CognitoForms documentation](https://www.cognitoforms.com/support/)
 Jonas and I investigated a bit and found the code to be something Microsoft related. 
 _Which later turned out to be Visual Basic._
-Knowing this, we coded the default value of the field like so:
+Knowing this, we coded this!
 
 ```vb
 fridgeTemp = if LeftFridgeTemperature < 1 or RightFridgeTemperature < 1 
@@ -48,4 +48,11 @@ fridgeTemp = if LeftFridgeTemperature < 1 or RightFridgeTemperature < 1
              then "Above 5C"
              else "Between 1-5C"
 ```
+
+But as you might be able to tell, this doesn't really tell a field whether or not it needs to be hidden! 
+Remember, we can use _Hidden Fields._ That's right. We made the default value of a hidden field be 
+equal to the above logic. 
+Then, our required form is hidden as long as the value of the "fridgeTemp" field, is "Between 1-5C" 
+
+
 
