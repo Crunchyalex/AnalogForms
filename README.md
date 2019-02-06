@@ -38,9 +38,8 @@ As we saw with hidding / showing a section, Cognito Forms provides a basic inter
 But you can also create custom conditional logic written with code! 
 [CognitoForms documentation](https://www.cognitoforms.com/support/)
 
-Jonas and I investigated a bit, and found the code to be something Microsoft related. 
-_Which later turned out to be Visual Basic._
-Knowing this, we coded this!
+Jonas and I investigated a bit, and found the code to be Visual Basic! 
+Knowing this, we started coding our first function.
 
 ```vb
 fridgeTemp = if LeftFridgeTemperature < 1 or RightFridgeTemperature < 1 
@@ -49,16 +48,21 @@ fridgeTemp = if LeftFridgeTemperature < 1 or RightFridgeTemperature < 1
              then "Above 5C"
              else "Between 1-5C"
 ```
+And Voila! 
 
-But as you might be able to tell, this doesn't really tell a field whether or not it needs to be hidden! 
+As you might be able to tell, this doesn't really tell a field whether or not it needs to be hidden. So how do we achieve this? 
 
-Hold on to your butts, because this is when things get _Wild._
+Well, I hope you're prepared, because this is when things get _Wild._
 
 We made use of _Hidden Fields_ acting as variables..! 
 
+Okay, okay. Maybe not _that_ wild. But still!
+
 Any text field can have a default value, set by a function. That's right. We made the default value of a hidden field be 
 equal to the above logic. 
-Then, our required field looks at the hidden field value and if it's equal to "Between 1-5C", the required field stays hidden.
+Then, our required field looks at this hidden field value and if it is equal to "Between 1-5C", the required field stays hidden!
+
+
 
 
 
