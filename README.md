@@ -37,7 +37,8 @@ If our barista reports anything outside the range of 1-5C, the barista has to fi
 As we saw with hidding / showing a section, Cognito Forms provides a basic interface for applying logic.
 But you can also create custom conditional logic written with code! 
 [CognitoForms documentation](https://www.cognitoforms.com/support/)
-Jonas and I investigated a bit and found the code to be something Microsoft related. 
+
+Jonas and I investigated a bit, and found the code to be something Microsoft related. 
 _Which later turned out to be Visual Basic._
 Knowing this, we coded this!
 
