@@ -18,17 +18,27 @@ Besides this, they need to select which shift they are on, either opening, middl
 
 Because each type of shift require their own fields, we only want display the those relevant and have the rest hidden.
 This is easy to implement with the inbuilt click-logic of CognitoForms.
+
+
 ![ShowMiddle](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/ShowMiddle.png)
+
 
 Showing a section then, is super simple. But what do we include in the sections?
 
-The opening shift needs to report the temperature of the fridges. And if they report them outside the optimal range of 1-5C, we provide a field the baristas have to fill out, in case the milk has turned bad.
+### Opening
+The first thing we do on opening (besides checking in!) is checking the temperature of our fridges!
+If our barista reports anything outside the range of 1-5C, the barista has to fill out a required field.
+
 
 ![BadMilk](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/BadMilk.gif)
 
-To create this effect, we created a permanently hidden text field with a default value set to a little piece of logic! 
+To create this effect, 
 
 ```
-isHidden = if LeftFridgeTemperature < 0 or RightFridgeTemperature < 0 then "Below 1C" else if 5 < LeftFridgeTemperature or 5 < RightFridgeTemperature then "Above 5C" else "Between 1-5C"
+fridgeTemp = if LeftFridgeTemperature < 0 or RightFridgeTemperature < 0 
+             then "Below 1C"
+             else if 5 < LeftFridgeTemperature or 5 < RightFridgeTemperature
+             then "Above 5C"
+             else "Between 1-5C"
 ```
 
