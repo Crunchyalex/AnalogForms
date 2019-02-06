@@ -32,9 +32,8 @@ If our barista reports anything outside the range of 1-5C, the barista has to fi
 
 ![BadMilk](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/BadMilk.gif)
 
-To create this effect we made use of _Hidden Fields_ acting as variables.
-Any text field can have a default value, set by a function.
-As we saw with hidding / showing a section, Cognito Forms provide a basic interface for applying logic.
+
+As we saw with hidding / showing a section, Cognito Forms provides a basic interface for applying logic.
 But you can also create custom conditional logic written with code! 
 [CognitoForms documentation](https://www.cognitoforms.com/support/)
 Jonas and I investigated a bit and found the code to be something Microsoft related. 
@@ -50,9 +49,16 @@ fridgeTemp = if LeftFridgeTemperature < 1 or RightFridgeTemperature < 1
 ```
 
 But as you might be able to tell, this doesn't really tell a field whether or not it needs to be hidden! 
-Remember, we can use _Hidden Fields._ That's right. We made the default value of a hidden field be 
+
+Hold on to your butts, because this is when things get _Wild._
+
+We made use of _Hidden Fields_ acting as variables..! 
+
+Any text field can have a default value, set by a function. That's right. We made the default value of a hidden field be 
 equal to the above logic. 
-Then, our required form is hidden as long as the value of the "fridgeTemp" field, is "Between 1-5C" 
+Then, our required field looks at the hidden field value and if it's equal to "Between 1-5C", the required field stays hidden.
+
+
 
 
 
