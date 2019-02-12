@@ -42,9 +42,11 @@ Jonas and I investigated a bit, and found the code to be Visual Basic!
 Knowing this, we started coding our first function.
 
 ```vb
-fridgeTemp = if LeftFridgeTemperature < 1 or RightFridgeTemperature < 1
+fridgeTemp = if LeftFridgeTemperature < 1 or 
+                RightFridgeTemperature < 1
              then "Below 1C"
-             else if 5 < LeftFridgeTemperature or 5 < RightFridgeTemperature
+             else if 5 < LeftFridgeTemperature or 
+                     5 < RightFridgeTemperature
              then "Above 5C"
              else "Between 1-5C"
 ```
@@ -133,12 +135,13 @@ We have a required field to fill out in case a barista is unable to do their mid
 Here's the code. A fair warning though, it ain't pretty.
 
 ```vb
-=(!DidYouCleanBothFridges and
+= (!DidYouCleanBothFridges and
   !DidYouCleanBothGrinders and 
   !DidYouCleanTheDrawerCoversInTheKitchenAndBar and
   !DidYouCleanTheFilterCoffeeMachines and
   !DidYouCleanTheIceMachine and
-  !DidYouCleanTheShelves and !DidYouCleanTheThermosAndDifferentContainers and
+  !DidYouCleanTheShelves and
+  !DidYouCleanTheThermosAndDifferentContainers and
   !DidYouCleanTheTrashCansAndBins and
   !DidYouCleanTheWallsAndSinks and 
   !DidYouEmptyAndCleanAllTheDrawers)
