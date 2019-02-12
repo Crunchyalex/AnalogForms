@@ -63,9 +63,18 @@ equal to the above logic.
 Then, our required field looks at this hidden field value and if it is equal to "Between 1-5C" the required field stays hidden!
 
 ### Middle
-The middle shift, while perhaps being the most simple, took us quite a while to make! 
+The middle shift, a simple two-question form. Right? 
+Well, this was actually the most tedious form to make!
 
 ![Middle](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/Middle.png)
 
+Notice the second question. _Did you remember to do X on your shift?_
 
+At first glance, it might not be obvious why this would be anything special. But let's see what happens if we change the date of the week! 
 
+![TodayClean](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/TodayClean.gif)
+
+**The question changes!!**
+
+This part was really exciting to make. We had to figure out how to programatically only show the relevant question of the day! 
+Of course, this meant _more hidden fields!!!_ 
