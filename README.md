@@ -74,7 +74,10 @@ At first glance, it might not be obvious why this would be anything special. But
 
 ![TodayClean](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/TodayClean.gif)
 
-**The question changes!!**
+***The question changes!!***
 
-This part was really exciting to make. We had to figure out how to programatically only show the relevant question of the day! 
+This part was really exciting to make. We had to figure out how to only show the relevant question of the day! 
 Of course, this meant _more hidden fields!!!_ 
+
+![HiddenFields](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/HiddenFields.png)
+
