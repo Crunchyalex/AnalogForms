@@ -86,13 +86,13 @@ These 5 fields handle the middle form, let's talk about the relevant ones for th
 ### isEvenWeek
 Since our cleaning tasks follow the barista shifts on their biweekly shifts, we have to figure out if the current date lies on an even or uneven week. 
 ```vb
-=Math.Round( ( ( Form.TheBasics.Date.DayOfYear + 6) / 7 ) % 2 ) == 0
+= Math.Round( ( ( Form.TheBasics.Date.DayOfYear + 6) / 7 ) % 2 ) == 0
 ```
 This code translates the provided date into "Day of Year", a number between 1-366 (31st of December being number 366 on leap years).
 Then, we do some cute arithmatic (+ 6 and divide by 7) This gives us the current week number. We then follow this by taking the [modulos] (https://en.wikipedia.org/wiki/Modulo_operation) of 2 which either gives us 1 or 0. If it's 0, we're even, if it's 1, we're uneven! 
 
 ### shiftDay
-Shift Day   
+Here, we figure out which week day it is, followed by the use of our newly created ```isEvenWeek``` to figure out which particular shift day it is! 
 ```vb
 = if (Form.TheBasics.Date.DayOfWeek = "Monday")
   then if (IsEvenWeek.Equals("true"))
@@ -116,3 +116,16 @@ else if (Form.TheBasics.Date.DayOfWeek = "Friday")
   else "FridayUneven"
 else "Weekend"
 ```
+So now we have every shift named either .-DayEven or .-DayUneven! 
+
+Hiding the forms now has become a simple task. We apply a bit of code to each question field:
+```vb
+= ShiftDay.Equals("TuesdayUneven")
+```
+And the hidden property is then just the true or false reading above! 
+
+
+
+# Closing thoughts
+This project, while being a tad more complex than it perhaps could've been, definitely has room for improvement! 
+What about vacation days where no one is on shift? Perhaps there could be an easter egg hidden for the curious nerds? We could add new and cool graphics, gifs, who knows! There are tons of possibilities for our forms. 
