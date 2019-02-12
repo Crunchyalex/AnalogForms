@@ -126,7 +126,7 @@ And the hidden property is then just the true or false reading above!
 
 ### showWhyNot
 
-![NoClean](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/NoClean.png)
+![NoClean](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/NoClean.gif)
 
 We have a required field to fill out in case a barista is unable to do their middle shift cleaning. Unfortunately we didn't optimize this particularly. It just checks all the form fields and if they're all not set to "no", then we show the required field. Cooler could've been to have a new hidden field that evaluates to true or false, whether or not the question of the day is set to "yes".
 
