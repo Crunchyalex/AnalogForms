@@ -63,7 +63,9 @@ equal to the above logic.
 Then, our required field looks at this hidden field value and if it is equal to "Between 1-5C" the required field stays hidden!
 
 ### Middle
+The middle shift, while perhaps being the most simple, took us quite a while to make! 
 
 ![Middle](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/Middle.png)
 
-The middle shift, while perhaps being the most simple, is a very code-heavy form.
+
+
