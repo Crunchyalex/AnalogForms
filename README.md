@@ -89,7 +89,7 @@ Since our cleaning tasks follow the barista shifts on their biweekly shifts, we 
 = Math.Round( ( ( Form.TheBasics.Date.DayOfYear + 6) / 7 ) % 2 ) == 0
 ```
 This code translates the provided date into "Day of Year", a number between 1-366 (31st of December being number 366 on leap years).
-Then, we do some cute arithmatic (+ 6 and divide by 7) This gives us the current week number. We then follow this by taking the [modulos] (https://en.wikipedia.org/wiki/Modulo_operation) of 2 which either gives us 1 or 0. If it's 0, we're even, if it's 1, we're uneven! 
+Then, we do some cute arithmatic (+ 6 and divide by 7) This gives us the current week number. We then follow this by taking the [modulos](https://en.wikipedia.org/wiki/Modulo_operation) of 2, which returns 1 or 0. If it's 0 we're even and if it's 1 we're uneven! 
 
 ### shiftDay
 Here, we figure out which week day it is, followed by the use of our newly created ```isEvenWeek``` to figure out which particular shift day it is! 
@@ -124,7 +124,26 @@ Hiding the forms now has become a simple task. We apply a bit of code to each qu
 ```
 And the hidden property is then just the true or false reading above! 
 
+### showWhyNot
 
+![NoClean](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/NoClean.png)
+
+We have a required field to fill out in case a barista is unable to do their middle shift cleaning. Unfortunately we didn't optimize this particularly. It just checks all the form fields and if they're all not set to "no", then we show the required field. Cooler could've been to have a new hidden field that evaluates to true or false, whether or not the question of the day is set to "yes".
+
+Here's the code. A fair warning though, it ain't pretty.
+
+```vb
+=(!DidYouCleanBothFridges and
+  !DidYouCleanBothGrinders and 
+  !DidYouCleanTheDrawerCoversInTheKitchenAndBar and
+  !DidYouCleanTheFilterCoffeeMachines and
+  !DidYouCleanTheIceMachine and
+  !DidYouCleanTheShelves and !DidYouCleanTheThermosAndDifferentContainers and
+  !DidYouCleanTheTrashCansAndBins and
+  !DidYouCleanTheWallsAndSinks and 
+  !DidYouEmptyAndCleanAllTheDrawers)
+```
+_I'm sorry._ We'll definitely have to write something prettier for the next form! 
 
 # Closing thoughts
 This project, while being a tad more complex than it perhaps could've been, definitely has room for improvement! 
