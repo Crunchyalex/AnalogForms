@@ -149,5 +149,9 @@ Here's the code. A fair warning though, it ain't pretty.
 _I'm sorry._ We'll definitely have to write something prettier for the next form! 
 
 # Closing thoughts
-This project, while being a tad more complex than it perhaps could've been, definitely has room for improvement! 
-What about vacation days where no one is on shift? Perhaps there could be an easter egg hidden for the curious nerds? We could add new and cool graphics, gifs, who knows! There are tons of possibilities for our forms. 
+This project, while being a tad more complex than it perhaps could've been, was a lot of fun to make!
+It has room for improvements, too! What about vacation days where no one is on shift? Perhaps there could be an easter egg hidden away?
+We could add new and cool graphics, gifs, minigames, anything is possible! 
+
+For me, this was a lovely example of turning something chore-ish, into a fun and interesting project. 
+So for your next tedious task, think back to this form, and see if you can turn something tedious into something exciting! 
