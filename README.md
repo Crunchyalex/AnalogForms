@@ -26,7 +26,7 @@ This is easy to implement with the inbuilt click-logic of CognitoForms.
 
 Showing a section then, is super simple. But what do we include in the sections?
 
-### Opening
+## Opening
 The first thing we do on opening (besides checking in!) is checking the temperature of our fridges!
 If our barista reports anything outside the range of 1-5C, the barista has to fill out a required field.
 
@@ -62,7 +62,7 @@ Any text field can have a default value, set by a function. That's right. We mad
 equal to the above logic.
 Then, our required field looks at this hidden field value and if it is equal to "Between 1-5C" the required field stays hidden!
 
-### Middle
+## Middle
 The middle shift, a simple two-question form. Right? 
 Well, this was actually the most tedious form to make!
 
@@ -81,3 +81,38 @@ Of course, this meant _more hidden fields!!!_
 
 ![HiddenFields](https://raw.githubusercontent.com/Crunchyalex/AnalogForms/master/HiddenFields.png)
 
+These 5 fields handle the middle form, let's talk about the relevant ones for the daily cleaning task.
+
+### isEvenWeek
+Since our cleaning tasks follow the barista shifts on their biweekly shifts, we have to figure out if the current date lies on an even or uneven week. 
+```vb
+=Math.Round(((Form.TheBasics.Date.DayOfYear + 6)/7)%2)==0
+```
+This code translates the provided date into "Day of Year", a number between 1-366 (31st of December being number 366 on leap years).
+Then, we do some cute arithmatic (+ 6 and divide by 7) This gives us the current week number. We then follow this by taking the [modulos] (https://en.wikipedia.org/wiki/Modulo_operation) of 2 which either gives us 1 or 0. If it's 0, we're even, if it's 1, we're uneven! 
+
+### shiftDay
+Shift Day   
+```vb
+= if (Form.TheBasics.Date.DayOfWeek = "Monday")
+  then if (IsEvenWeek.Equals("true"))
+  then "MondayEven"
+  else "MondayUneven"
+else if (Form.TheBasics.Date.DayOfWeek = "Tuesday")
+  then if (IsEvenWeek.Equals("true"))
+  then "TuesdayEven"
+  else "TuesdayUneven"
+else if (Form.TheBasics.Date.DayOfWeek = "Wednesday")
+  then if (IsEvenWeek.Equals("true"))
+  then "WednesdayEven"
+  else "WednesdayUneven"
+else if (Form.TheBasics.Date.DayOfWeek = "Thursday")
+  then if (IsEvenWeek.Equals("true"))
+  then "ThursdayEven"
+  else "ThursdayEven"
+else if (Form.TheBasics.Date.DayOfWeek = "Friday")
+  then if (IsEvenWeek.Equals("true"))
+  then "FridayEven"
+  else "FridayUneven"
+else "Weekend"
+```
