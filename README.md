@@ -86,7 +86,7 @@ These 5 fields handle the middle form, let's talk about the relevant ones for th
 ### isEvenWeek
 Since our cleaning tasks follow the barista shifts on their biweekly shifts, we have to figure out if the current date lies on an even or uneven week. 
 ```vb
-=Math.Round(((Form.TheBasics.Date.DayOfYear + 6)/7)%2)==0
+=Math.Round( ( ( Form.TheBasics.Date.DayOfYear + 6) / 7 ) % 2 ) == 0
 ```
 This code translates the provided date into "Day of Year", a number between 1-366 (31st of December being number 366 on leap years).
 Then, we do some cute arithmatic (+ 6 and divide by 7) This gives us the current week number. We then follow this by taking the [modulos] (https://en.wikipedia.org/wiki/Modulo_operation) of 2 which either gives us 1 or 0. If it's 0, we're even, if it's 1, we're uneven! 
